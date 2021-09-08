@@ -6,9 +6,15 @@ export const ConfirmButton = styled.button`
     background-color: #13DED6;
     font-size: ${props => props.textSize};
     border-radius: .5rem;
+    outline: none;
     border: none;
     color: #fff;
     margin: ${props => props.margin};
+    cursor: pointer;
+
+    &:hover {
+        opacity: .9;
+    }
 
     ${props => 
         props.isShortenIt && css`
