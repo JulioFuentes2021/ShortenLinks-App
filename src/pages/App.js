@@ -52,7 +52,13 @@ function App(props) {
             <HeaderPresentation/>
             <ShortenLink/>
             {allCopyElements.map((item) => (
-                <CopyElement key={item.result.code} code={item.result.original_link} shortLink={item.result.full_short_link}/>
+                <CopyElement
+                    key={item.result.code}
+                    code={item.result.code}
+                    original={item.result.original_link}
+                    shortLink={item.result.full_short_link}
+                    linkForCopy={item.result.short_link}
+                />
             ))}
             <AdvancedStatics/>
             <CardsPosition>

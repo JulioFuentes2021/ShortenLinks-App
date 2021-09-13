@@ -6,14 +6,36 @@ import { Context } from '../Context/index';
 
 function CopyElement(props) {
     const {
-        allCopyElements
+        allCopyElements,
+        setAllCopyElements
     } = React.useContext(Context);
+
+    const findIndex = (code, secondCode) => {
+        return code === secondCode
+    }
+
+    const deleteLink = (code) => {
+        console.log(props.original)
+        const index = allCopyElements.findIndex(link => link.result.code === code)
+        const newAllCopyElements = [...allCopyElements];
+        newAllCopyElements.splice(index,1)
+        setAllCopyElements(newAllCopyElements)
+        console.log(allCopyElements)
+        console.log(index)
+    }
+
+    const copyUrl = async () => {
+        const url = props.linkForCopy;
+        await navigator.clipboard.writeText(url);
+        alert('Copied!')
+    }
+
 
     return (
         <CopyElementContainer>
             <CopyElementPosition>
                 <OriginalUrl>
-                    {props.code}
+                    {props.original}
                 </OriginalUrl>
                 <ShortenLinksContainer>
                     <UrlModified>
@@ -24,6 +46,7 @@ function CopyElement(props) {
                         width={'6rem'}
                         textSize={'1.5rem'}
                         height={'3rem'}
+                        onClick={copyUrl}
                     >
                         copy
                     </ConfirmButton>
@@ -32,6 +55,7 @@ function CopyElement(props) {
                         height={'3rem'}
                         textSize={'1.5rem'}
                         isDelete
+                        onClick={() => deleteLink(props.code)}
                     >
                         Delete
                     </ConfirmButton>

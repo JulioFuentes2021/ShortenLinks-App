@@ -23,12 +23,11 @@ function ShortenLink() {
             console.log('Input vacio')
         } else {
             setLinks(input.value)
-        }
-
-        console.log('aaaaaaaaaaaaaaaaaaa',links)
+            console.log('aaaaaaaaaaaaaaaaaaa',links)
         const url = `https://api.shrtco.de/v2/shorten?url=${input.value}`;
         input.value="";
         shortUrl(url)
+        }
     }
 
     
