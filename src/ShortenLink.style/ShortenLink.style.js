@@ -22,6 +22,7 @@ export const ShortenLinkContainer = styled.form`
         flex-direction: row;
         align-items: center;
         padding: 0 3rem;
+        height: 10rem;
     }
 `;
 
@@ -33,6 +34,7 @@ export const ShortenInput = styled.input`
     padding-left: 1rem;
     margin-top: .5rem;
     border-radius: .3rem;
+    font-size: 1.5rem;
 
     @media screen and (min-width:768px) {
         margin-top: 0;

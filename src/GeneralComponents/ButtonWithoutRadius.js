@@ -14,13 +14,26 @@ export const ConfirmButton = styled.button`
 
     &:hover {
         opacity: .9;
-    }
 
-    ${props => 
+    }
+    ${props =>
         props.isShortenIt && css`
         @media screen and (min-width:768px) {
             width: 10%;
         }
+        `
+    }
+
+    ${props =>
+        props.isDelete && css`
+            background-color: rgb(185, 30, 30);
+            color: #fff;
+        `
+    }
+
+    ${props =>
+        props.isCopied && css`
+            padding: ${props => props.padding};
         `
     }
 
