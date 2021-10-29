@@ -6,7 +6,6 @@ const Context = React.createContext();
 function Provider(props) {
     // const [links,setLinks] = React.useState('');
     const [allCopyElements, setAllCopyElements,loadLinks] = useLocalStorage('links',[]);
-    const [loading, setLoading] = React.useState(false);
     // const [prueba,setPrueba] = React.useState([])
 
 
@@ -48,8 +47,6 @@ function Provider(props) {
         <Context.Provider value={{
             allCopyElements,
             setAllCopyElements,
-            loading,
-            setLoading,
             shortUrl,
             allCopyElements,
             setAllCopyElements,

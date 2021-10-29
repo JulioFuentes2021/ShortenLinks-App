@@ -56,7 +56,7 @@ function App(props) {
                     key={item.result.code}
                     code={item.result.code}
                     original={item.result.original_link}
-                    shortLink={item.result.full_short_link}
+                    shortLink={item.result.short_link}
                     linkForCopy={item.result.short_link}
                 />
             ))}
@@ -79,7 +79,7 @@ function App(props) {
                         image={Image3}
                         alt={'Fully Customizable Image'}
                         title={'Fully Customizable'}
-                        contentCard={'Improve brand awareness and content discoberability through customizable links. Supercharging audience engagement.'}
+                        contentCard={'Improve brand awareness and content discoverability through customizable links. Supercharging audience engagement.'}
                     />
                     <Line/>
                 </CardsContainer>

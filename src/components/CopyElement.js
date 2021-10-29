@@ -7,7 +7,8 @@ import { Context } from '../Context/index';
 function CopyElement(props) {
     const {
         allCopyElements,
-        setAllCopyElements
+        setAllCopyElements,
+        loading
     } = React.useContext(Context);
 
     const findIndex = (code, secondCode) => {
@@ -68,17 +69,6 @@ function CopyElement(props) {
 const fontSize = "2"
 const padding = "1"
 
-
-const deleteUrl = styled.button`
-    color: #875;
-    cursor: pointer;
-    font-size: 15rem;
-    position: relative;
-    top: 10px;
-    background-color: #000;
-    border: 5px solid red;
-`;
-
 const CopyElementContainer = styled.section`
     display: flex;
     justify-content: center;
@@ -88,19 +78,32 @@ const CopyElementContainer = styled.section`
 const CopyElementPosition = styled.article`
     width: 90%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-color: #fff;
     box-shadow: .1rem .1rem .2rem 0 #bbb;
+
+    @media screen and (min-width: 768px) {
+        justify-content: space-between;
+        
+    }
 `;
 
 const OriginalUrl = styled.span`
     color: #000;
     font-weight: 400;
-    font-size: ${fontSize}rem;
+    /* font-size: ${fontSize}rem; */
+    font-size: 1rem;
     padding: ${padding}rem;
     letter-spacing: .1rem;
     line-height: 1.25;
+    
+    
+    @media screen and (min-width:768px) {
+        display: block;
+        font-size: ${fontSize}rem;
+    }
 `;
 
 const ShortenLinksContainer = styled.div`
@@ -108,11 +111,21 @@ const ShortenLinksContainer = styled.div`
     align-items: center;
     font-size: ${fontSize}rem;
     padding: ${padding}rem;
+    flex-direction: column;
+
+    @media screen and (min-width:768px) {
+        
+    }
 `;
 
 const UrlModified = styled.span`
     color: #13DED6;
     margin: 0 1.5rem;
+    
+
+    @media screen and (min-width:768px) {
+        display: block;
+    }
 `;
 
 
