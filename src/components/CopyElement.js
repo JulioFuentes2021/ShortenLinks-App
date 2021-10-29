@@ -57,6 +57,7 @@ function CopyElement(props) {
                         textSize={'1.5rem'}
                         isDelete
                         onClick={() => deleteLink(props.code)}
+                        margin = '1rem 0'
                     >
                         Delete
                     </ConfirmButton>
@@ -86,7 +87,7 @@ const CopyElementPosition = styled.article`
 
     @media screen and (min-width: 768px) {
         justify-content: space-between;
-        
+        flex-direction: row;
     }
 `;
 
@@ -114,7 +115,7 @@ const ShortenLinksContainer = styled.div`
     flex-direction: column;
 
     @media screen and (min-width:768px) {
-        
+        flex-direction: row;
     }
 `;
 
