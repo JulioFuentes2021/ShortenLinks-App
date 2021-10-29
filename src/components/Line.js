@@ -18,7 +18,7 @@ const LineContainer = styled.div`
 
 const LineComponent = styled.div`
     width: .5rem;
-    height: 100%;
+    height: 110%;
     background-color: #13DED6;
     position: absolute;
     z-index: 0;

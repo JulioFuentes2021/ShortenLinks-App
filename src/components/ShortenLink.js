@@ -39,7 +39,7 @@ function ShortenLink() {
                     
                 </ShortenInput>
                 <ConfirmButton
-                    width={'85%'}
+                    width={''}
                     height={'40%'}
                     textSize={'1.5rem'}
                     margin={'0 0 .5rem 0'}

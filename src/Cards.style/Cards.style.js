@@ -22,13 +22,18 @@ export const Card  = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     margin: 2rem 0;
-    height: 17rem;
+    /* height: 17rem; */
     position: relative;
     z-index: 20;
 
     @media screen and (min-width: 768px) {
         width: 30%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        height: 20rem;
     }
 
     ${props => 
@@ -63,6 +68,7 @@ export const TitleCard = styled.h3`
     font-weight: 600;
     margin: 0 0 .5rem 0;
     font-size: 1.7rem;
+    text-align: center;
 `;
 
 export const TextCard = styled.p`
