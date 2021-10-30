@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { ConfirmButton } from '../GeneralComponents/ButtonWithoutRadius';
 import { Context } from '../Context/index';
-
+import swal from 'sweetalert';
+ 
 
 function CopyElement(props) {
     const {
@@ -28,7 +29,11 @@ function CopyElement(props) {
     const copyUrl = async () => {
         const url = props.linkForCopy;
         await navigator.clipboard.writeText(url);
-        alert('Copied!')
+        swal({
+            title: "Good job!",
+            text: "Link copied successfully",
+            icon: "success",
+        });
     }
 
 
@@ -70,13 +75,13 @@ function CopyElement(props) {
 const fontSize = "2"
 const padding = "1"
 
-const CopyElementContainer = styled.section`
+export const CopyElementContainer = styled.section`
     display: flex;
     justify-content: center;
     margin: 0 0 2rem 0;
 `;
 
-const CopyElementPosition = styled.article`
+export const CopyElementPosition = styled.article`
     width: 90%;
     display: flex;
     align-items: center;
@@ -85,13 +90,13 @@ const CopyElementPosition = styled.article`
     background-color: #fff;
     box-shadow: .1rem .1rem .2rem 0 #bbb;
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1400px) {
         justify-content: space-between;
         flex-direction: row;
     }
 `;
 
-const OriginalUrl = styled.span`
+export const OriginalUrl = styled.span`
     color: #000;
     font-weight: 400;
     /* font-size: ${fontSize}rem; */

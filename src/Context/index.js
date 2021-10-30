@@ -19,14 +19,14 @@ function Provider(props) {
         const elementLength = allCopyElements.length;
         // if (elementLength === 0  || elementLength === 1) {
         //     setElement([elementLength] = newLink)
-        // } else 
+        // } else
         //     setElement([elementLength] = newLink)
         // }
        
         try {
             allCopyElements.push(newLink)
-        setAllCopyElements(allCopyElements)
-        loadLinks()
+            setAllCopyElements(allCopyElements)
+            loadLinks()
         } catch(error) {
             console.log('error')
         }
