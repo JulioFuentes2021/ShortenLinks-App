@@ -9,6 +9,7 @@ import AdvancedStatics from '../components/AdvancedStatics';
 import Boost from '../components/Boost';
 import Footer from '../components/Footer';
 import CopyElement from '../components/CopyElement';
+import UbicationOfTheLinks from '../components/UbicationOfTheLinks';
 import { CardsPosition, CardsContainer } from '../Cards.style/Cards.style'
 import Image1 from '../images/image1.svg'
 import Image2 from '../images/image2.svg'
@@ -51,6 +52,10 @@ function App(props) {
             <MobileNavbar/>
             <HeaderPresentation/>
             <ShortenLink/>
+            { !allCopyElements.length ? <UbicationOfTheLinks
+                                instructions={'The links will be here.'}
+                                />: ''
+            }
             {allCopyElements.map((item) => (
                 <CopyElement
                     key={item.result.code}
