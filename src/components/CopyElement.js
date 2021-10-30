@@ -90,7 +90,7 @@ export const CopyElementPosition = styled.article`
     background-color: #fff;
     box-shadow: .1rem .1rem .2rem 0 #bbb;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1400px) {
         justify-content: space-between;
         flex-direction: row;
     }
