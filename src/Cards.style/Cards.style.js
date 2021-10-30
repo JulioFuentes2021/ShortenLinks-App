@@ -27,9 +27,11 @@ export const Card  = styled.div`
     /* height: 17rem; */
     position: relative;
     z-index: 20;
+    /* height: 15rem; */
 
     @media screen and (min-width: 768px) {
         width: 30%;
+        height: 25rem;
     }
 
     @media screen and (min-width: 1024px) {
