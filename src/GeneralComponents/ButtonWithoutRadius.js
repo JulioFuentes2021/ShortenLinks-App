@@ -19,7 +19,7 @@ export const ConfirmButton = styled.button`
     ${props =>
         props.isShortenIt && css`
         @media screen and (min-width:768px) {
-            width: 10%;
+            width: 20%;
         }
         `
     }
