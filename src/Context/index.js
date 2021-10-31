@@ -1,47 +1,37 @@
 import React from 'react';
 import { useLocalStorage } from '../LocalStorage/useLocalStorage';
+import swal from 'sweetalert';
 
 const Context = React.createContext();
 
 function Provider(props) {
-    // const [links,setLinks] = React.useState('');
     const [allCopyElements, setAllCopyElements,loadLinks] = useLocalStorage('links',[]);
-    // const [prueba,setPrueba] = React.useState([])
-
-
     let prueba;
 
-
     const shortUrl = async (url) => {
-        const res = await fetch(url);
-        const newLink = await res.json();
-
-        const elementLength = allCopyElements.length;
-        // if (elementLength === 0  || elementLength === 1) {
-        //     setElement([elementLength] = newLink)
-        // } else
-        //     setElement([elementLength] = newLink)
-        // }
-       
+        let res;
+        let newLink;
         try {
-            allCopyElements.push(newLink)
-            setAllCopyElements(allCopyElements)
-            loadLinks()
+            res = await fetch(url);
+            newLink = await res.json();
+            console.log('New Link papa',newLink)
         } catch(error) {
             console.log('error')
         }
-        
-        console.log('Este es el newLink',newLink)
-        console.log('Este es el elment',allCopyElements)
+
+        if (newLink.ok === false) {
+            console.log('Algo ha fallado')
+            swal("Uups! Something went wrong", {
+                buttons: false,
+                timer: 3000,
+                icon: "error",
+              });
+        } else {
+            allCopyElements.push(newLink)
+            setAllCopyElements(allCopyElements)
+            loadLinks()
+        }
     }
-
-    // const addLink = (link) => {
-    //     const newLink = [...prueba];
-    //     newLink.push(link)
-    //     setAllCopyElements(newLink);
-    // }
-
-    
 
     return (
         <Context.Provider value={{

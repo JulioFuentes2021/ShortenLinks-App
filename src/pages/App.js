@@ -43,7 +43,9 @@ function App(props) {
     // }
 
 
-    
+    // if (!allCopyElements) {
+    //     return <h1>Un error desconocido a aparecido</h1>
+    // }
 
 
     return (
@@ -56,7 +58,7 @@ function App(props) {
                                 instructions={'The links will be here.'}
                                 />: ''
             }
-            {allCopyElements.map((item) => (
+            {allCopyElements ? allCopyElements.map((item) => (
                 <CopyElement
                     key={item.result.code}
                     code={item.result.code}
@@ -64,7 +66,7 @@ function App(props) {
                     shortLink={item.result.short_link}
                     linkForCopy={item.result.short_link}
                 />
-            ))}
+            )) : <h1>Uups! Something went wrong! Check your connection</h1>}
             <AdvancedStatics/>
             <CardsPosition>
                 <CardsContainer>

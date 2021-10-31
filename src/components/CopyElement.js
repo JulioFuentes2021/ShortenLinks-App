@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { ConfirmButton } from '../GeneralComponents/ButtonWithoutRadius';
 import { Context } from '../Context/index';
 import swal from 'sweetalert';
- 
 
 function CopyElement(props) {
     const {

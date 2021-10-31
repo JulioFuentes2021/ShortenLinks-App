@@ -38,7 +38,7 @@ export const Card  = styled.div`
         height: 20rem;
     }
 
-    ${props => 
+    ${props =>
         props.isSecond && css`
             @media screen and (min-width:768px) {
                 transform: translateY(2rem);
