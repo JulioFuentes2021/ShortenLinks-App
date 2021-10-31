@@ -6,6 +6,7 @@ import {
         } from '../ShortenLink.style/ShortenLink.style';
 import { ConfirmButton } from '../GeneralComponents/ButtonWithoutRadius';
 import { Context } from '../Context/index';
+import swal from 'sweetalert';
 
 function ShortenLink() {
 
@@ -27,6 +28,11 @@ function ShortenLink() {
         const url = `https://api.shrtco.de/v2/shorten?url=${input.value}`;
         input.value="";
         shortUrl(url)
+        swal("Link created successfully", {
+            buttons: false,
+            timer: 3000,
+            icon: "success",
+          });
         }
     }
 
