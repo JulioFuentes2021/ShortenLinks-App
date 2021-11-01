@@ -6,6 +6,7 @@ const Context = React.createContext();
 
 function Provider(props) {
     const [allCopyElements, setAllCopyElements,loadLinks] = useLocalStorage('links',[]);
+    const [loading, setLoading] = React.useState(false);
     let prueba;
 
     const shortUrl = async (url) => {
@@ -40,7 +41,7 @@ function Provider(props) {
             shortUrl,
             allCopyElements,
             setAllCopyElements,
-            prueba
+            prueba,
         }}
         >
             {props.children}

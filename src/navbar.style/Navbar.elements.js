@@ -29,6 +29,7 @@ export const Header = styled.header`
     display: none;
     justify-content: space-between;
     align-items: center;
+    height: 15vh;
 
     @media screen and (min-width: 768px) {
         display: flex;

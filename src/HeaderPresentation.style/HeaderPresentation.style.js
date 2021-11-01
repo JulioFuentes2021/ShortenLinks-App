@@ -4,6 +4,8 @@ export const HeaderPresentationContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 85vh;
+    /* background-color: red; */
     @media screen and (min-width: 768px) {
         flex-direction: row-reverse;
         justify-content: center;

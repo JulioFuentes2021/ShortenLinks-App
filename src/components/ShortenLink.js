@@ -15,6 +15,7 @@ function ShortenLink() {
 
     const {
         shortUrl,
+        loading
     } = React.useContext(Context)
 
     const handleLinks = (e) => {
@@ -34,9 +35,8 @@ function ShortenLink() {
             icon: "success",
           });
         }
-    }
 
-    
+    }
 
     return (
         <ShortenLinkPosition>
@@ -52,7 +52,7 @@ function ShortenLink() {
                     isShortenIt
                     type="submit"
                 >
-                    Shorten It!
+                    Shorten it!
                 </ConfirmButton>
             </ShortenLinkContainer>
         </ShortenLinkPosition>
