@@ -14,39 +14,13 @@ import { CardsPosition, CardsContainer } from '../Cards.style/Cards.style'
 import Image1 from '../images/image1.svg'
 import Image2 from '../images/image2.svg'
 import Image3 from '../images/image3.svg'
-import { useEffect } from 'react';
-// import axios from 'axios';
 import { Context } from '../Context/index';
 
 function App(props) {
 
     const {
-        links,
-        loading,
         allCopyElements,
-        setAllCopyElements,
-        prueba
     } = React.useContext(Context)
-
-    useEffect(() => {
-        console.log('Hola')
-        // fetchData()
-        console.log('Los elementos desde APpp',allCopyElements)
-        console.log('Los elementos desde prueba',prueba)
-        console.log(allCopyElements)
-    },[])
-
-    // const fetchData = async () => {
-    //     const url = 'https://api.shrtco.de/v2/shorten?url=platzi.com';
-    //     const res = await axios.get(url)
-    //     console.log(res);
-    // }
-
-
-    // if (!allCopyElements) {
-    //     return <h1>Un error desconocido a aparecido</h1>
-    // }
-
 
     return (
         <>

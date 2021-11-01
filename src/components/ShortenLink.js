@@ -15,7 +15,6 @@ function ShortenLink() {
 
     const {
         shortUrl,
-        loading
     } = React.useContext(Context)
 
     const handleLinks = (e) => {
@@ -25,7 +24,6 @@ function ShortenLink() {
             console.log('Input vacio')
         } else {
             setLinks(input.value)
-            console.log('aaaaaaaaaaaaaaaaaaa',links)
         const url = `https://api.shrtco.de/v2/shorten?url=${input.value}`;
         input.value="";
         shortUrl(url)
@@ -41,9 +39,7 @@ function ShortenLink() {
     return (
         <ShortenLinkPosition>
             <ShortenLinkContainer onSubmit={handleLinks} >
-                <ShortenInput placeholder="Shorten a Link here..." type="url" id="shortenInput">
-                    
-                </ShortenInput>
+                <ShortenInput placeholder="Shorten a Link here..." type="url" id="shortenInput" />
                 <ConfirmButton
                     width={''}
                     height={'40%'}

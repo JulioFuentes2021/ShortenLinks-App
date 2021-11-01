@@ -9,13 +9,6 @@ function Line(props) {
     );
 }
 
-const LineContainer = styled.div`
-    @media screen and (min-width: 768px) {
-        display: flex;
-        background-color:green;
-    }
-`;
-
 const LineComponent = styled.div`
     width: .5rem;
     height: 70%;

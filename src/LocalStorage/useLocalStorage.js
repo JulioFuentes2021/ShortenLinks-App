@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 
 export function useLocalStorage(key,initialValue) {
     const [links,setLinks] = React.useState(initialValue);
-    // const [loading, setLoading] = React.useState(false)
 
     useEffect(() => {
         loadLinks()
@@ -36,5 +35,5 @@ export function useLocalStorage(key,initialValue) {
         }
     }
 
-    return [links,addLink,loadLinks]
+    return [links, addLink, loadLinks]
 }

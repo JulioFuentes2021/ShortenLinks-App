@@ -8,21 +8,13 @@ function CopyElement(props) {
     const {
         allCopyElements,
         setAllCopyElements,
-        loading
     } = React.useContext(Context);
 
-    const findIndex = (code, secondCode) => {
-        return code === secondCode
-    }
-
     const deleteLink = (code) => {
-        console.log(props.original)
         const index = allCopyElements.findIndex(link => link.result.code === code)
         const newAllCopyElements = [...allCopyElements];
         newAllCopyElements.splice(index,1)
         setAllCopyElements(newAllCopyElements)
-        console.log(allCopyElements)
-        console.log(index)
     }
 
     const copyUrl = async () => {

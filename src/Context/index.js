@@ -5,9 +5,7 @@ import swal from 'sweetalert';
 const Context = React.createContext();
 
 function Provider(props) {
-    const [allCopyElements, setAllCopyElements,loadLinks] = useLocalStorage('links',[]);
-    const [loading, setLoading] = React.useState(false);
-    let prueba;
+    const [allCopyElements, setAllCopyElements, loadLinks] = useLocalStorage('links',[]);
 
     const shortUrl = async (url) => {
         let res;
@@ -15,13 +13,11 @@ function Provider(props) {
         try {
             res = await fetch(url);
             newLink = await res.json();
-            console.log('New Link papa',newLink)
         } catch(error) {
             console.log('error')
         }
 
         if (newLink.ok === false) {
-            console.log('Algo ha fallado')
             swal("Uups! Something went wrong", {
                 buttons: false,
                 timer: 3000,
@@ -41,7 +37,6 @@ function Provider(props) {
             shortUrl,
             allCopyElements,
             setAllCopyElements,
-            prueba,
         }}
         >
             {props.children}
@@ -50,4 +45,4 @@ function Provider(props) {
 
 }
 
-export { Context, Provider }
+export { Context, Provider };

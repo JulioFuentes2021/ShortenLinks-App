@@ -11,7 +11,7 @@ function HeaderPresentation(props) {
     return (
         <HeaderPresentationContainer>
             <HeaderImage>
-                <img src={Image} alt="Header Image" />
+                <img src={Image} alt="Header" />
             </HeaderImage>
             <HeaderInformation>
                 <h1>More than just shorter links</h1>
