@@ -27,6 +27,11 @@ function Provider(props) {
             allCopyElements.push(newLink)
             setAllCopyElements(allCopyElements)
             loadLinks()
+            swal("Link created successfully", {
+                buttons: false,
+                timer: 3000,
+                icon: "success",
+              });
         }
     }
 

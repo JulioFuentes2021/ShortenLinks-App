@@ -27,11 +27,11 @@ function ShortenLink() {
         const url = `https://api.shrtco.de/v2/shorten?url=${input.value}`;
         input.value="";
         shortUrl(url)
-        swal("Link created successfully", {
-            buttons: false,
-            timer: 3000,
-            icon: "success",
-          });
+        // swal("Link created successfully", {
+        //     buttons: false,
+        //     timer: 3000,
+        //     icon: "success",
+        //   });
         }
 
     }

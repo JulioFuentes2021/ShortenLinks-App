@@ -15,6 +15,9 @@ import Image1 from '../images/image1.svg'
 import Image2 from '../images/image2.svg'
 import Image3 from '../images/image3.svg'
 import { Context } from '../Context/index';
+import { useInView } from 'react-intersection-observer';
+import '../App.css'
+
 
 function App(props) {
 
@@ -22,8 +25,14 @@ function App(props) {
         allCopyElements,
     } = React.useContext(Context)
 
+    const { ref, inView, entry } = useInView({
+        /* Optional options */
+        threshold: 0,
+        triggerOnce: true
+    });
+
     return (
-        <>
+        <div ref={ref} className={inView ? 'show':'NotShow'}>
             <PcNavbar/>
             <MobileNavbar/>
             <HeaderPresentation/>
@@ -67,7 +76,7 @@ function App(props) {
             </CardsPosition>
             <Boost/>
             <Footer/>
-        </>
+        </div>
     );
 }
 

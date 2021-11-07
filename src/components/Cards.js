@@ -5,11 +5,19 @@ import {
         TitleCard,
         TextCard
         } from '../Cards.style/Cards.style'
+import { useInView } from 'react-intersection-observer';
+import '../App.css'
 
 function Cards(props) {
+    const { ref, inView, entry } = useInView({
+        /* Optional options */
+        threshold: 0,
+        triggerOnce: true,
+      });
+
     return (
         <>
-            <Card>
+            <Card ref={ref} className={inView ? 'show':'NotShow'}>
                 <ImageCard>
                     <img src={props.image} alt={props.alt} />
                 </ImageCard>
