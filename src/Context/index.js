@@ -17,13 +17,14 @@ function Provider(props) {
             console.log('error')
         }
 
-        if (newLink.ok === false) {
+        if (!res) {
             swal("Uups! Something went wrong", {
                 buttons: false,
                 timer: 3000,
                 icon: "error",
-              });
-        } else {
+            });
+        }
+        if (newLink.ok === true) {
             allCopyElements.push(newLink)
             setAllCopyElements(allCopyElements)
             loadLinks()
@@ -32,6 +33,12 @@ function Provider(props) {
                 timer: 3000,
                 icon: "success",
               });
+        } else {
+            swal("Uups! Something went wrong", {
+                buttons: false,
+                timer: 3000,
+                icon: "error",
+            });
         }
     }
 
