@@ -7,7 +7,7 @@ const index = () => {
     return (
         <Router>
             <Switch>
-                <Route exact path="/" component={Index} />
+                <Route exact path="/ShortenLinks-App" component={Index} />
                 <Route component={Error} />
             </Switch>
         </Router>
