@@ -8,10 +8,10 @@ function Line(props) {
         </>
     );
 }
-
+//Antes de eliminar la linea crea una etiqueta con la linea y sin las linea, la segunda sera la final
 const LineComponent = styled.div`
     width: .5rem;
-    height: 70%;
+    height: 100%;
     background-color: #13DED6;
     position: absolute;
     z-index: 0;
