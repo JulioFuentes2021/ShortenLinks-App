@@ -63,7 +63,7 @@ export const LinkButton = styled.button`
     color: #fff;
     font-weight: bolder;
     cursor: pointer;
-    margin: ${props => props.padding};
+    margin: ${props => props.padding || 'auto'};
 
     &:hover {
         opacity: .7;
