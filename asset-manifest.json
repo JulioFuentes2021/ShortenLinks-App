@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/ShortenLinks-App/static/css/main.1cdc3679.chunk.css",
+    "main.js": "/ShortenLinks-App/static/js/main.e72aa953.chunk.js",
+    "main.js.map": "/ShortenLinks-App/static/js/main.e72aa953.chunk.js.map",
+    "runtime-main.js": "/ShortenLinks-App/static/js/runtime-main.2a3dff76.js",
+    "runtime-main.js.map": "/ShortenLinks-App/static/js/runtime-main.2a3dff76.js.map",
+    "static/js/2.2ea14f60.chunk.js": "/ShortenLinks-App/static/js/2.2ea14f60.chunk.js",
+    "static/js/2.2ea14f60.chunk.js.map": "/ShortenLinks-App/static/js/2.2ea14f60.chunk.js.map",
+    "index.html": "/ShortenLinks-App/index.html",
+    "static/css/main.1cdc3679.chunk.css.map": "/ShortenLinks-App/static/css/main.1cdc3679.chunk.css.map",
+    "static/js/2.2ea14f60.chunk.js.LICENSE.txt": "/ShortenLinks-App/static/js/2.2ea14f60.chunk.js.LICENSE.txt",
+    "static/media/header_image.103b30a1.svg": "/ShortenLinks-App/static/media/header_image.103b30a1.svg",
+    "static/media/image1.a4a20b4f.svg": "/ShortenLinks-App/static/media/image1.a4a20b4f.svg",
+    "static/media/image2.d6bc17be.svg": "/ShortenLinks-App/static/media/image2.d6bc17be.svg",
+    "static/media/image3.6c0f19dd.svg": "/ShortenLinks-App/static/media/image3.6c0f19dd.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2a3dff76.js",
+    "static/js/2.2ea14f60.chunk.js",
+    "static/css/main.1cdc3679.chunk.css",
+    "static/js/main.e72aa953.chunk.js"
+  ]
+}

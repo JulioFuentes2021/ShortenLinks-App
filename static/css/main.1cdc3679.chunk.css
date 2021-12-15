@@ -1,0 +1,2 @@
+*{padding:0;margin:0;box-sizing:border-box}body{background-color:#ddd}html{overflow-x:hidden}.show{-webkit-animation:Arrival 1.5s ease;animation:Arrival 1.5s ease}.NotShow{opacity:0}@-webkit-keyframes Arrival{0%{opacity:0}to{opacity:1}}@keyframes Arrival{0%{opacity:0}to{opacity:1}}
+/*# sourceMappingURL=main.1cdc3679.chunk.css.map */
